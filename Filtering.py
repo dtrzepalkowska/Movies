@@ -52,7 +52,7 @@ class Filtering:
                 csv_reader = csv.reader(csv_file, delimiter=',')
                 for row in csv_reader:
                     money = row[13]
-                    if len(money) >= 13:
+                    if len(money) >= 12:
                         print(f'\t{row[1]} {row[13]}')
                         # print(len(money))
 
