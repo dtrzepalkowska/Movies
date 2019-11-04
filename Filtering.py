@@ -38,7 +38,7 @@ class Filtering:
                     wins = sum(nom_awa[0:1])
                     if sum_nomi != 0:
                         result = (wins / sum_nomi)
-                        if result >= 0.30:
+                        if result >= 0.80:
                             print(f'\t{row[1]}' " %.2f" % result)
                             # print("%.2f" % result)
                     else:
@@ -47,12 +47,12 @@ class Filtering:
 
                 print(f'Processed {line_count} lines.')
 
-        elif column in ['box_office'] and value in ['money']:
+        elif column in ['box_office'] and value in ['big_money']:
             with open('Movies_populated.csv') as csv_file:
                 csv_reader = csv.reader(csv_file, delimiter=',')
                 for row in csv_reader:
                     money = row[13]
-                    if len(money) >= 11:
+                    if len(money) >= 13:
                         print(f'\t{row[1]} {row[13]}')
                         # print(len(money))
 
